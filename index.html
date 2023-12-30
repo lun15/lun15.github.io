@@ -38,7 +38,7 @@
     <div class="container is-max-widescreen">
       <!-- <div class="columns is-centered"> -->
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SKELETON-BASED GRAPH CONVOLUTIONAL NETWORKS FOR HUMAN ACTION DETAILED DESCRIPTION</h1>
+          <h1 class="title is-1 publication-title">Skeleton-Based Graph Convolutional Networks for Human Action Detailed Description</h1>
           <div class="is-size-3 publication-authors">
             <!-- <span class="author-block">[ECCV 2022]</span> -->
             <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
@@ -55,18 +55,21 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="https://guytevet.github.io/" target="_blank">Guy Tevet</a>*,</span>
+            <!-- <span class="author-block"><a href="https://guytevet.github.io/" target="_blank">Guy Tevet</a>*,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=VNDhTycAAAAJ&amp;hl=en" target="_blank">Brian Gordon</a>*,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=mnk__kYAAAAJ&amp;hl=en" target="_blank">Amir Hertz</a>,</span>
             
             <span class="author-block"><a href="https://www.cs.tau.ac.il/~amberman/" target="_blank">Amit H. Bermano</a>,</span>
-            <span class="author-block"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span>
+            <span class="author-block"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span> -->
+            <span class="author-block"><a href="f74109016@gs.ncku.edu.tw" target="_blank">葉惟欣F74109016</a></span>
+            <span class="author-block"><a href="e64096245@gs.ncku.edu.tw" target="_blank">黃佳倫E64096245</a></span>
+            <span class="author-block"><a href="an4096019@gs.ncku.edu.tw" target="_blank">黃翊瑄AN4096019</a></span>
             
             
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Tel Aviv University, Israel</span> 
+            <span class="author-block">National Cheng Kung University, Taiwan</span> 
             <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
           </div>
           
@@ -158,12 +161,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce MotionCLIP, a 3D human motion auto-encoder featuring a latent embedding that is disentangled, well behaved, and supports highly semantic textual descriptions.
-MotionCLIP gains its unique power by aligning its latent space with that of the Contrastive Language-Image Pre-training (CLIP) model.  Aligning the human motion manifold to CLIP space implicitly infuses the extremely rich semantic knowledge of CLIP into the manifold. In particular, it helps continuity by placing semantically similar motions close to one another, and disentanglement, which is inherited from the CLIP-space structure.
-MotionCLIP comprises a transformer-based motion auto-encoder, trained to reconstruct motion while being aligned to its text label's position in CLIP-space. 
-We further leverage CLIP's unique visual understanding and inject an even stronger signal through aligning motion to rendered frames in a self-supervised manner.
-We show that although CLIP has never seen the motion domain, MotionCLIP offers unprecedented text-to-motion abilities, allowing out-of-domain actions, disentangled editing, and abstract language specification. For example, the text prompt "couch" is decoded into a sitting down motion, due to lingual similarity, and the prompt "Spiderman" results in a web-swinging-like solution that is far from seen during training.  
-In addition, we show how the introduced latent space can be leveraged for motion interpolation, editing and recognition.</p>
+            The relationship between vision and languages is important in our daily life. There are many researches concerning making computers to describe human actions such like Video Captioning, text to image or video. When it comes to human motion, there are fewer researches. The Task “Motion to description” is difficult, not to mention the task “Motion to detailed descriptions such as body parts”. Also, those researches about motion analysis mostly based on the joints connected with skeletons.
+
+            However, we think that the relationships between the disconnected joints are also important to motion analysis. Furthermore, movement of one part of the body that leads to a change in the overall posture, such as kicking with a leg to transition the entire body into an attacking stance. In order to consider such motion, the skeleton graph will need to consider the relationship between joints in different time.
+
+          </p>
         </div>
       </div>
     </div>
