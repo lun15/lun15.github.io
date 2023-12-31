@@ -138,6 +138,17 @@ body {
   /*margin: -25px 0 0 -25px;*/
 }
 
+.results-carousel .horizontal-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.results-carousel .horizontal-layout .column {
+  flex: none;
+  width: 50%; 
+  box-sizing: border-box;
+}
+
 .results-carousel video {
   margin: 0;
 }
