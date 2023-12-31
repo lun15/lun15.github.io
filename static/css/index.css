@@ -142,6 +142,27 @@ body {
   margin: 0;
 }
 
+#results-carousel2 .results-carousel .columns {
+  display: flex;
+  justify-content: center;
+}
+
+#results-carousel2 .results-carousel .column {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#results-carousel2 .results-carousel .item {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+#results-carousel2 .results-carousel .item img {
+  display: block;
+  margin: 0 auto;
+}
+
 .slider-pagination .slider-page {
   background: #000000;
 }
