@@ -1,0 +1,15 @@
+.normalized{
+    padding: 0%;
+    margin: 0%;
+}
+.normalized img {
+    margin: 0%;
+    padding: 0%;
+    width: 50%;
+    clip: rect(500em, 500em, 500em, 500em);
+}
+
+.normalize-image-grid{
+    display:flex; 
+    flex-direction: row;
+}
