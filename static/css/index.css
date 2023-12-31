@@ -158,7 +158,12 @@ body {
 }
 
 */
-.two-item {
-  width: 50%;
-  height: 50px;
+.image-grid div { 
+  display: inline-block; 
+  width: 50%; 
+  text-align: center; 
+} 
+
+.image-grid img { 
+  max-width: 100%;
 }
