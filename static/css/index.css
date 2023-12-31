@@ -138,16 +138,6 @@ body {
   /*margin: -25px 0 0 -25px;*/
 }
 
-.custom-carousel .columns {
-  display: flex;
-  justify-content: center; 
-}
-
-.custom-carousel .column {
-  width: 50%; 
-  box-sizing: border-box; 
-}
-
 .results-carousel video {
   margin: 0;
 }
