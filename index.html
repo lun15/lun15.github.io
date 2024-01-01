@@ -30,6 +30,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="static/js/videoComparison.js"></script>
 </head>
 <body>
 
@@ -62,9 +63,11 @@
             
             <span class="author-block"><a href="https://www.cs.tau.ac.il/~amberman/" target="_blank">Amit H. Bermano</a>,</span>
             <span class="author-block"><a href="https://danielcohenor.com/" target="_blank">Daniel Cohen-Or</a></span> -->
-            <span class="author-block"><a href="f74109016@gs.ncku.edu.tw" target="_blank">葉惟欣F74109016</a></span>
-            <span class="author-block"><a href="e64096245@gs.ncku.edu.tw" target="_blank">黃佳倫E64096245</a></span>
-            <span class="author-block"><a href="an4096019@gs.ncku.edu.tw" target="_blank">黃翊瑄AN4096019</a></span>
+            
+            <!-- 名字 -->
+            <!-- <span class="author-block"><a href="mailto: f74109016@gs.ncku.edu.tw" target="_blank">葉惟欣F74109016</a></span>
+            <span class="author-block"><a href="mailto: e64096245@gs.ncku.edu.tw" target="_blank">黃佳倫E64096245</a></span>
+            <span class="author-block"><a href="mailto: an4096019@gs.ncku.edu.tw" target="_blank">黃翊瑄AN4096019</a></span> -->
             
             
           </div>
@@ -127,24 +130,33 @@
 </section>
 
 <section class="hero is-small">
-  <!-- <div class="hero-body"> -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
-      <div class="container">
-      <div class="item">
-      <div class="column is-centered has-text-centered">
-        <img src="static/figures/teaser.png" alt="MotionCLIP"/>
-      </div>
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="container">
+        <div class="item">
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/teaser.png" alt="MotionCLIP"/>
+        </div>
 
+      </div>
     </div>
-  </div>
- <!--  </div> -->
-  </div>
-  </div>
- <!--  </div> -->
-</section>
+    </div>
+    </div>
+  </section> -->
+  <section class="is-centered teaser">
+    <div id="video-compare-container">
+      <video poster="" id="" autoplay muted loop >
+        <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/floodplain-clean.mp4" type="video/mp4">
+      </video>
+     <div id="video-clipper" >
+      <video poster="" id="" autoplay muted loop >
+        <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/floodplain-dirty.mp4"
+        type="video/mp4">
+      </video>
+      </div>
+      </div>
+  </section>
 
 <section class="section hero is-light">
   <div class="container is-max-desktop">

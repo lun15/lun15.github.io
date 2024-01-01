@@ -13,3 +13,32 @@
     display:flex; 
     flex-direction: row;
 }
+
+
+
+#video-compare-container {
+    /* display: inline-block; */
+    /* line-height: 0; */
+    position: relative;
+    padding-top: 42.3%;
+  }
+  #video-compare-container > video {
+    width: 100%;
+    position: absolute;
+    top: 0; height: 100%;
+  }
+  #video-clipper {
+    width: 100%; position: absolute;
+    top: 0; bottom: 0;
+    overflow: hidden;
+  }
+  #video-clipper video {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 200%;
+    /*   background-color: blue; */
+    height: 100%;
+    display: block;
+    overflow: hidden;
+  }
