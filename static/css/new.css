@@ -9,6 +9,7 @@
     clip: rect(500em, 500em, 500em, 500em);
 }
 
+
 .normalize-image-grid{
     display:flex; 
     flex-direction: row;
@@ -38,4 +39,66 @@
   position: absolute;
   height: 100%;
   max-width: 100000%;
+}
+
+
+#enlarge-container{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top:20%;
+  left:25%;
+  background-color: rgb(190, 184, 184);
+  transition: 10s;
+  z-index: 6;
+}
+
+
+.preprocessing-image-container{
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  height: 25em;
+  padding: 2% 3% 2% 3%;
+}
+.preprocessing-label-container{
+  padding: 2% 5% 2% 5%;
+  display: grid;
+  grid-template-columns: repeat(5, 23%);
+  background-color: white;
+}
+.preprocessing-label-container > div{
+  font-weight: 900;
+}
+
+.preprocessing-image-container > div {
+  display: flex;
+  width: 100%;
+}
+
+.preprocessing-image-container > div > img{
+  height: 20em;
+}
+
+.bone-joint{
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.bone-joint > img{
+  height: 10em;
+  width: 6em;
+  display: block;
+  position: relative;
+  left: 4em;
+}
+
+.arrow{
+  position: relative;
+  top: 3em;
+  left: 3px;
+  font-size: 40px;
+  font-weight: 500;
+  /* color:rgb(0, 145, 255) */
 }

@@ -108,7 +108,7 @@
 <!--                            </span>-->
               <!-- </span> -->
               <!-- Colab Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/GuyTevet/MotionCLIP" target="_blank"
                 class="external-link button is-normal is-rounded">
                 <span class="icon">
@@ -117,7 +117,7 @@
                 <span>Code</span>
               </a>
 
-              </span>
+              </span> -->
               <!-- </span> -->
               <!-- Colab Link. -->
             </div>
@@ -129,54 +129,270 @@
   </div>
 </section>
 
-<section class="hero is-small">
   <section class="hero teaser">
           <img src="static/figures/figureskating.png" alt="skating"/>
   </section>
-  <section class="is-centered teaser" >
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The relationship between vision and languages is important in our daily life. There are many researches concerning making computers to describe human actions such like Video Captioning, text to image or video. When it comes to human motion, there are fewer researches. The Task “Motion to description” is difficult, not to mention the task “Motion to detailed descriptions such as body parts”. Also, those researches about motion analysis mostly based on the joints connected with skeletons.
+           </p>
+           <p>
+            However, we think that the relationships between the disconnected joints are also important to motion analysis. Furthermore, movement of one part of the body that leads to a change in the overall posture, such as kicking with a leg to transition the entire body into an attacking stance. In order to consider such motion, the skeleton graph will need to consider the relationship between joints in different time.
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="column is-four-fifths">
+        <h2 class="has-text-centered" style="font-size: 40px; font-weight: 900;"> Preprocessing</h2>
+        <div class="content has-text-justified">          
+          <p>description</p>
+        </div>
+      </div>
+    </div>
+    <div class=" preprocessing-label-container">
+      <div>
+        Raw video
+      </div>
+      <div>
+        Mesh
+      </div>
+      <div>
+        Not normalized 
+      </div>
+      <div>
+        Normalized
+      </div>
+      <div>
+        Joint and Bone
+      </div>
+
+    </div>
+    <div class=" preprocessing-image-container">
+      <div>
+        <img class="" src="static/figures/preprocessing/raw_467204328706015300.gif" alt="raw video"/>
+        <p class="arrow">&rarr;</p>
+      </div>
+      <div>
+        <img class="" src="static/figures/preprocessing/mesh_467204328706015300.gif" alt="mesh video"/>
+        <p class="arrow">&rarr;</p>
+      </div>
+      <div>
+        <img  src="static/figures/preprocessing/467204328706015300_not_normalize_animation.gif" alt="not normalized">
+        <p class="arrow">&rarr;</p>
+      </div>
+      <div>
+        <img src="static/figures/preprocessing/467204328706015300_animation.gif" alt="normalized">
+        <div>
+          <p class="arrow">&nearr;</p>
+          <p class="arrow">&searr;</p>
+        </div>
+      </div>
+      <div style="position:relative; left: 3em;">        
+        <div class="bone-joint">
+          <img src="static/figures/preprocessing/joint.png" alt="joint" >
+          <img src="static/figures/preprocessing/bone.png" alt="bone">
+        </div>
+      </div>        
+    </div>            
+  </section> 
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">SLAHMR</h2>
+          <div class="content has-text-justified">
+            <p>
+              ”Decoupling Human and Camera Motion from Videos in the Wild”. 
+              They infer 3D human motion with a full scene reconstruction for in-the-wild-videos. 
+            </p>
+            <p>
+              Their method robustly recovers the global 3D trajectories of people in challenging 
+              in-the-wild videos by predicting the camera intrinsic and extrinsic parameters and 
+              using the framework based on video(with temporal info). 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  >
     <div id="video-compare-container">
       <video poster="" id="" autoplay muted loop >
-        <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/floodplain-clean.mp4" type="video/mp4">
+        <source src="static/animation/raw_467204328706015300.mp4" type="video/mp4">
       </video>
      <div id="video-clipper" >
         <video poster="" id="" autoplay muted loop >
-          <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/floodplain-dirty.mp4" type="video/mp4">
+          <source src="static/animation/mesh_467204328706015300.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </section>
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <div class="item">
-          <p style="margin-bottom: 30px">
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
-          <source src="static/figures/MotionCLIP-projectpage-2.mp4"
-          type="video/mp4">
-        </video>
-        </p>
-        </div>
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The relationship between vision and languages is important in our daily life. There are many researches concerning making computers to describe human actions such like Video Captioning, text to image or video. When it comes to human motion, there are fewer researches. The Task “Motion to description” is difficult, not to mention the task “Motion to detailed descriptions such as body parts”. Also, those researches about motion analysis mostly based on the joints connected with skeletons.
-
-            However, we think that the relationships between the disconnected joints are also important to motion analysis. Furthermore, movement of one part of the body that leads to a change in the overall posture, such as kicking with a leg to transition the entire body into an attacking stance. In order to consider such motion, the skeleton graph will need to consider the relationship between joints in different time.
-
+  <!-- <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="item">
+            <p style="margin-bottom: 30px">
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src="static/figures/MotionCLIP-projectpage-2.mp4"
+            type="video/mp4">
+          </video>
           </p>
+          </div>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce MotionCLIP, a 3D human motion auto-encoder featuring a latent embedding that is disentangled, well behaved, and supports highly semantic textual descriptions.
+  MotionCLIP gains its unique power by aligning its latent space with that of the Contrastive Language-Image Pre-training (CLIP) model.  Aligning the human motion manifold to CLIP space implicitly infuses the extremely rich semantic knowledge of CLIP into the manifold. In particular, it helps continuity by placing semantically similar motions close to one another, and disentanglement, which is inherited from the CLIP-space structure.
+  MotionCLIP comprises a transformer-based motion auto-encoder, trained to reconstruct motion while being aligned to its text label's position in CLIP-space. 
+  We further leverage CLIP's unique visual understanding and inject an even stronger signal through aligning motion to rendered frames in a self-supervised manner.
+  We show that although CLIP has never seen the motion domain, MotionCLIP offers unprecedented text-to-motion abilities, allowing out-of-domain actions, disentangled editing, and abstract language specification. For example, the text prompt "couch" is decoded into a sitting down motion, due to lingual similarity, and the prompt "Spiderman" results in a web-swinging-like solution that is far from seen during training.  
+  In addition, we show how the introduced latent space can be leveraged for motion interpolation, editing and recognition.</p>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
+  </section> -->
+
+  
+
+  <section class="hero is-small">
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Normalize</h2>
+            <div class="content has-text-justified">
+              <div class="column is-centered has-text-centered">
+                <img src="" alt="joint and bone image"/>
+              </div>
+              <p>description</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+    
+  </section>
+
+  <section>
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel3" class="carousel results-carousel">
+          <div class="column is-centered has-text-centered" style="display:flex; flex-direction: row;">
+            <div class="column is-half">
+              <h3 class="title has-text-centered"> Non-normalized</h3>
+              <img class="" src="static/figures/Not Normalize/467204328706015300_not_normalize_animation.gif" alt="cars peace">
+            </div>
+            <div class="column is-half">
+              <h3 class="title has-text-centered"> Normalized</h3>
+              <img class="" src="static/figures/normalize/467204328706015300_animation.gif" alt="cars peace"/>
+            </div>
+          </div>
+          <div class="is-centered has-text-centered" style="display:flex; flex-direction: row;">
+            <div class="is-half">
+                <h3 class="title has-text-centered"> Non-normalized</h3>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/Not Normalize/467204764745597525_not_normalize_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/Not Normalize/468398494953242881_not_normalize_animation.gif" alt="cars peace"/>
+                </div>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/Not Normalize/470652828294054288_not_normalize_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/Not Normalize/471703049921102136_not_normalize_animation.gif" alt="cars peace"/>
+                </div>
+            </div>
+            <div class="is-half">
+                <h3 class="title has-text-centered"> Normalized</h3>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/normalize/467204764745597525_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/normalize/468398494953242881_animation.gif" alt="cars peace"/>
+                </div>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/normalize/470652828294054288_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/normalize/471703049921102136_animation.gif" alt="cars peace"/>
+                </div>
+            </div>
+          </div> 
+  
+  
+          <div class="column is-centered has-text-centered" style="display:flex; flex-direction: row;">
+            <div class="column is-half">
+                <h3 class="title has-text-centered"> Non-normalized</h3>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/Not Normalize/471703054736425109_not_normalize_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/Not Normalize/471703075120480727_not_normalize_animation.gif" alt="cars peace"/>
+                </div>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/Not Normalize/471703089079124074_not_normalize_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/Not Normalize/471703096813682946_not_normalize_animation.gif" alt="cars peace"/>
+                </div>
+              </div>
+            <div class="column is-half">
+                <h3 class="title has-text-centered"> Normalized</h3>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/normalize/471703054736425109_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/normalize/471703075120480727_animation.gif" alt="cars peace"/>
+                </div>
+                <div class="normalized normalize-image-grid">
+                  <img class="" src="static/figures/normalize/471703089079124074_animation.gif" alt="cars peace"/>
+                  <img class="" src="static/figures/normalize/471703096813682946_animation.gif" alt="cars peace"/>
+                </div>
+            </div>
+          </div>        
+        </div>
+        <div id="enlarge-container" hidden>
+          <label for="show"></label>
+          <img show src="static/figures/normalize/471703096813682946_animation.gif" alt="enlarge">
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">STA-GCN</h2>
+          <div class="content has-text-justified">
+            <div class="column is-centered has-text-centered">
+              <img src="static/figures/sta-gcn.png" alt="sta-gcn"/>
+            </div>
+            <p>
+              The relationship between vision and languages is important in our daily life. There are many researches concerning making computers to describe human actions such like Video Captioning, text to image or video. When it comes to human motion, there are fewer researches. The Task “Motion to description” is difficult, not to mention the task “Motion to detailed descriptions such as body parts”. Also, those researches about motion analysis mostly based on the joints connected with skeletons.
+           </p>
+           <p>
+            However, we think that the relationships between the disconnected joints are also important to motion analysis. Furthermore, movement of one part of the body that leads to a change in the overall posture, such as kicking with a leg to transition the entire body into an attacking stance. In order to consider such motion, the skeleton graph will need to consider the relationship between joints in different time.
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-<section class="hero is-small">
+
+
+
+
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
 
@@ -188,7 +404,18 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/Framework.png" alt="framework"/>
+        </div>  
+    </div>
+  </section>
+
+
 
 
 <section class="section hero is-light">
@@ -292,17 +519,17 @@ Even though not directly trained for this task, MotionCLIP shows unprecedented p
       <div class="column is-four-fifths">
         <h2 class="title is-3">Editing in Latent Space</h2>
         <div class="content has-text-justified">
-              <div class="column is-centered has-text-centered">
-        <img src="static/figures/edit.gif" alt="cars peace"/>
-      </div>
+          <div class="column is-centered has-text-centered">
+            <img src="static/figures/edit.gif" alt="cars peace"/>
+          </div>
           <p>
-          To demonstrate how disentangled and uniform MotionCLIP latent space is, we experiment with latent-space arithmetic to edit motion. 
-          These linear operations allow motion compositionality - the upper body action can be decomposed from the lower body one, and recomposed with another lower body performance. 
-          Style can be added by simply adding the vector of the style name embedding. These two properties potentially enable intuitive and semantic editing even for novice users. 
-</p>
-<p>
-In addition, linear interpolation between two latent codes yields semantic transitions between motions in both time and space. 
-This is a strong indication to the smoothness of this representation. 
+            To demonstrate how disentangled and uniform MotionCLIP latent space is, we experiment with latent-space arithmetic to edit motion. 
+            These linear operations allow motion compositionality - the upper body action can be decomposed from the lower body one, and recomposed with another lower body performance. 
+            Style can be added by simply adding the vector of the style name embedding. These two properties potentially enable intuitive and semantic editing even for novice users. 
+          </p>
+          <p>
+            In addition, linear interpolation between two latent codes yields semantic transitions between motions in both time and space. 
+            This is a strong indication to the smoothness of this representation. 
           </p>
         </div>
       </div>
@@ -312,7 +539,7 @@ This is a strong indication to the smoothness of this representation.
 </section> 
 
 
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel2" class="carousel results-carousel">
@@ -337,12 +564,11 @@ This is a strong indication to the smoothness of this representation.
   </div>
 </div>
 </div>
-</section>
+</section> -->
 
 
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Action Recognition</h2>
@@ -364,79 +590,11 @@ As can be seen, this is another example where our framework performs similarly t
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
-</section>
+</section> -->
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel3" class="carousel results-carousel">
-        <div class="column is-centered has-text-centered" style="display:flex; flex-direction: row;">
-          <div class="column is-half">
-            <h3 class="title has-text-centered"> Non-normalized</h3>
-            <img src="static/figures/Not Normalize/467204328706015300_not_normalize_animation.gif" alt="cars peace">
-          </div>
-          <div class="column is-half">
-            <h3 class="title has-text-centered"> Normalized</h3>
-            <img src="static/figures/normalize/467204328706015300_animation.gif" alt="cars peace"/>
-          </div>
-        </div>
-        <div class="is-centered has-text-centered" style="display:flex; flex-direction: row;">
-          <div class="is-half">
-              <h3 class="title has-text-centered"> Non-normalized</h3>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/Not Normalize/467204764745597525_not_normalize_animation.gif" alt="cars peace"/>
-                <img src="static/figures/Not Normalize/468398494953242881_not_normalize_animation.gif" alt="cars peace"/>
-              </div>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/Not Normalize/470652828294054288_not_normalize_animation.gif" alt="cars peace"/>
-                <img src="static/figures/Not Normalize/471703049921102136_not_normalize_animation.gif" alt="cars peace"/>
-              </div>
-          </div>
-          <div class="is-half">
-              <h3 class="title has-text-centered"> Normalized</h3>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/normalize/467204764745597525_animation.gif" alt="cars peace"/>
-                <img src="static/figures/normalize/468398494953242881_animation.gif" alt="cars peace"/>
-              </div>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/normalize/470652828294054288_animation.gif" alt="cars peace"/>
-                <img src="static/figures/normalize/471703049921102136_animation.gif" alt="cars peace"/>
-              </div>
-          </div>
-        </div> 
 
-
-	      <div class="column is-centered has-text-centered" style="display:flex; flex-direction: row;">
-          <div class="column is-half">
-              <h3 class="title has-text-centered"> Non-normalized</h3>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/Not Normalize/471703054736425109_not_normalize_animation.gif" alt="cars peace"/>
-                <img src="static/figures/Not Normalize/471703075120480727_not_normalize_animation.gif" alt="cars peace"/>
-              </div>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/Not Normalize/471703089079124074_not_normalize_animation.gif" alt="cars peace"/>
-                <img src="static/figures/Not Normalize/471703096813682946_not_normalize_animation.gif" alt="cars peace"/>
-              </div>
-            </div>
-          <div class="column is-half">
-              <h3 class="title has-text-centered"> Normalized</h3>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/normalize/471703054736425109_animation.gif" alt="cars peace"/>
-                <img src="static/figures/normalize/471703075120480727_animation.gif" alt="cars peace"/>
-              </div>
-              <div class="normalized normalize-image-grid">
-                <img src="static/figures/normalize/471703089079124074_animation.gif" alt="cars peace"/>
-                <img src="static/figures/normalize/471703096813682946_animation.gif" alt="cars peace"/>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
