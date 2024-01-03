@@ -102,3 +102,15 @@
   font-weight: 500;
   /* color:rgb(0, 145, 255) */
 }
+
+.title2{
+  font-size: 40px; 
+  font-weight: 900;
+}
+
+.dataste-image-grid{
+  display: flex;
+}
+.dataste-image-grid > img{
+  width: 6.3%;
+}
