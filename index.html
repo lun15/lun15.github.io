@@ -152,10 +152,31 @@
 
   <section class="section hero is-light">
     <div class="container is-max-desktop">
-      <div class="column is-four-fifths">
-        <h2 class="has-text-centered title2"> Dataset</h2>
-        <div class="content has-text-justified">          
-          <p>HumanML3D</p>
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Dataset</th>
+                    <th>Sequence Label</th>
+                    <th>Motion</th>
+                    <th>Features</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HumanML3D</td>
+                    <td>44970(# words5371)</td>
+                    <td>14616(28.59 hours)</td>
+                    <td>Text2Motion的model &rarr; 大量多變化的動作</td>
+                  </tr>
+                </tbody>
+              </table>
+            </p>
+          </div>      
+          
         </div>
       </div>
     </div>  
@@ -202,8 +223,8 @@
 
 
 
-
-  <section class="section hero is-light">
+  <!--  -->
+  <!-- <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="column is-four-fifths">
         <h2 class="has-text-centered title2"> Preprocessing</h2>
@@ -257,7 +278,28 @@
         </div>
       </div>        
     </div>            
-  </section> 
+  </section>  -->
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="column is-four-fifths">
+        <h2 class="has-text-centered title2"> Preprocessing</h2>
+        <div class="content has-text-justified">     
+          <p></p>
+        </div>
+      </div>
+    </div>           
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">  
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/Framework.png" alt="framework"/>
+        </div>      
+      </div>
+    </div>
+  </section>
 
   <section class="section hero is-light">
     <div class="container is-max-desktop">
@@ -280,40 +322,64 @@
     </div>
   </section>
 
-  <section  >
-    <div class="video-compare-container">
-      <video poster="" id="" autoplay muted loop >
-        <source src="static/animation/raw_467204328706015300.mp4" type="video/mp4">
-      </video>
-     <div class="video-clipper" >
+  <section  class="section hero is-light is-centered" style="display:flex; flex-direction: row; background-color: white;">
+    <div class="column is-half">
+      <div class="video-compare-container" style="height: 80%;">
         <video poster="" id="" autoplay muted loop >
-          <source src="static/animation/mesh_467204328706015300.mp4" type="video/mp4">
+          <source src="static/animation/raw_467204328706015300.mp4" type="video/mp4">
         </video>
+       <div class="video-clipper" >
+          <video poster="" id="" autoplay muted loop >
+            <source src="static/animation/mesh_467204328706015300.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
+    </div>    
+    <div class=" column is-half" >
+      <img src="static/figures/SMPL_joint_coordinate.png" alt="" style="height: 70%;">
     </div>
   </section>
 
-
-  
-
-  <section class="hero is-small">
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            
-            <div class="content has-text-justified">
-              <div class="column is-centered has-text-centered">
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Normalization</h2>
+          <div class="content has-text-justified">
+            <p>
+              <table >
+                <tr>
+                  <th>Step1</th>
+                  <td><p>Use the distance between right knee and right angle to scale every relative 
+                    position of every joints. </p></td>
+                </tr>
+                <tr>
+                  <th>Step2</th>
+                  <td>After calculate the forward vector of the whole body by outer product 
+                    of the ”shoulder vector” and ”hip vector”, </td>
+                </tr>
+                <tr>
+                  <th>Step3</th>
+                  <td>Use ”Inverse Kinematics” to calculates quaternion rotations for each
+                    joint to achieve the desired pose in Kinematics tree. </td>
+                </tr>
+                <tr>
+                  <th>Step4</th>
+                  <td>Use ”Forward Kinematics” to accumulate rotations for each joint.</td>
+                </tr>
+                <tr>
+                  <th>Step5</th>
+                  <td> Optical Flow  Joint displacement vector</td>
+                </tr>
                 
-              </div>
-            </div>
-          </div>
+              </table>
+            </p>
+          </div>      
+          
         </div>
       </div>
-    </section>  
-    
+    </div>  
   </section>
+  
 
   <section>
     <div class="hero-body">
@@ -388,6 +454,32 @@
       
     </div>
   </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Input Feature</h2>
+          <div class="content has-text-justified">
+            <p>
+            </p>
+          </div>      
+          
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">  
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/input_feature.png" alt="input feature"/>
+        </div>      
+      </div>
+    </div>
+  </section>
+
+
   
   <section class="section hero is-light">
     <div class="container is-max-desktop">
@@ -566,7 +658,8 @@
                   <div class="video-clipper">
                     <img src="static/figures/attention/010481_humanML3D_animation.gif" alt="">
                   </div>
-                </div>
+                </div>                  
+                
                 <label class="arrow next slider-navigation-previous" for="slide-7"><svg  viewBox="0 0 50 80" xml:space="preserve">
                   <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
                 </svg></label>
