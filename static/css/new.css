@@ -6,7 +6,7 @@
     margin: 0%;
     padding: 0%;
     width: 50%;
-    clip-path: inset(150px 40px 100px 60px);
+    clip-path: inset(70px 20px 60px 20px);
 }
 
 .normalized > div > img {
@@ -50,12 +50,11 @@
   position: absolute;
   overflow: hidden;
   height: 100%;
-  display: flex;
 }
 
 .video-clipper > video{
  
-  width: 200%;
+  /* width: 200%; */
   position: absolute;
   height: 100%;
   max-width: 100000%;
@@ -181,7 +180,7 @@
   .carousel-content { 
     /* height: 0;  */
     overflow: hidden; 
-    line-height: 22px;
+    /* line-height: 22px; */
     background: #fff;
     position: absolute;
     /* top: 0px; */
@@ -227,4 +226,9 @@
       img { opacity: 1; }
     }
   }
+}
+
+.carousel-image-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
