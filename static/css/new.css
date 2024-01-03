@@ -176,7 +176,7 @@
       transition: 0.2s ease-in; */
     }        
   }
-  li:nth-child(1) > .dot { margin-left: 44.6% }
+  li:nth-child(1) > .dot { margin-left: 44.6%; }
   .carousel-content { 
     /* height: 0;  */
     overflow: hidden; 
@@ -190,7 +190,7 @@
     padding: 0;     
     img {      
       /* width:20%; */
-      /* clip-path: inset(150px 40px 100px 60px); */
+      /* clip-path: inset(50px 0px 0px 0px); */
     } 
 
   }
@@ -201,6 +201,7 @@
     width: 10px;
     height: 10px;
     background: rgb(8, 8, 8);
+
     position: relative;
     margin-top: 56%;
     border-radius: 50%;
