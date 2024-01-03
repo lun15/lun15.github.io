@@ -5,29 +5,41 @@ function init(){
 
     /* video comparison bar*/    
     var videoContainers = document.getElementsByClassName("video-compare-container");
-    Array.prototype.forEach.call(videoContainers,videoContainer=>{        
+    Array.prototype.forEach.call(videoContainers,videoContainer=>{    
 
-        var videoClippers = document.getElementsByClassName("video-clipper");
-        Array.prototype.forEach.call(videoClippers, videoClipper => {
-            function trackLocation(e) {
-                var rect = videoContainer.getBoundingClientRect();
-                var position = ((e.pageX - rect.left) / videoContainer.offsetWidth)*100;
-                if (position <= 100) { 
-                  videoClipper.style.width = position+"%";
-                //   video
-                  clippedVideo.style.width = ((100/position)*100)+"%";
-                  clippedVideo.style.zIndex = 3;
-                //   image
-                  clippedImage.style.width = ((100/position)*100)+"%";
-                  clippedImage.style.zIndex = 3;
-                }
+        function trackLocation(e) {
+            let currentContainer = e.target;
+            let currentClipper = e.target.parentNode;
+
+            if((e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "video") && e.target.parentNode.classList.contains("video-compare-container")){
+                currentContainer = e.target.parentNode;
+                currentClipper = e.target.parentNode.children[1];
             }
-            var clippedVideo = videoClipper.getElementsByTagName("video")[0];   
-            var clippedImage = videoClipper.getElementsByTagName("img")[0]; 
-            videoContainer.addEventListener( "mousemove", trackLocation, false); 
-            videoContainer.addEventListener("touchstart",trackLocation,false);
-            videoContainer.addEventListener("touchmove",trackLocation,false);
-        })
+            if(e.target.tagName.toLowerCase() == "div" && e.target.classList.contains("video-clipper")){
+                currentContainer = e.target.parentNode;
+                currentClipper = e.target;
+            }
+
+            if((e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "video") && e.target.parentNode.classList.contains("video-clipper")){
+                currentContainer = e.target.parentNode.parentNode;
+                currentClipper = e.target.parentNode;
+            }
+
+            console.log(currentContainer);
+            console.log(currentClipper);
+
+            var rect = currentContainer.getBoundingClientRect();
+            var position = ((e.pageX - rect.left) / currentContainer.offsetWidth)*100;
+            if (position <= 100) { 
+                currentClipper.style.width = position+"%";
+                var clippedVideo = currentClipper.children[0];   
+                clippedVideo.style.width = ((100/position)*100)+"%";
+                clippedVideo.style.zIndex = 3;
+            }
+        }
+        videoContainer.addEventListener("mousemove", trackLocation, false); 
+        videoContainer.addEventListener("touchstart",trackLocation,false);
+        videoContainer.addEventListener("touchmove",trackLocation,false);
         
     })
     

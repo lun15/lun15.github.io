@@ -222,21 +222,21 @@
     <div class=" preprocessing-image-container">
       <div>
         <img class="" src="static/figures/preprocessing/raw_467204328706015300.gif" alt="raw video"/>
-        <p class="arrow">&rarr;</p>
+        <p class="arrow-dataset">&rarr;</p>
       </div>
       <div>
         <img class="" src="static/figures/preprocessing/mesh_467204328706015300.gif" alt="mesh video"/>
-        <p class="arrow">&rarr;</p>
+        <p class="arrow-dataset">&rarr;</p>
       </div>
       <div>
         <img  src="static/figures/preprocessing/467204328706015300_not_normalize_animation.gif" alt="not normalized">
-        <p class="arrow">&rarr;</p>
+        <p class="arrow-dataset">&rarr;</p>
       </div>
       <div>
         <img src="static/figures/preprocessing/467204328706015300_animation.gif" alt="normalized">
         <div>
-          <p class="arrow">&nearr;</p>
-          <p class="arrow">&searr;</p>
+          <p class="arrow-dataset">&nearr;</p>
+          <p class="arrow-dataset">&searr;</p>
         </div>
       </div>
       <div style="position:relative; left: 3em;">        
@@ -427,23 +427,69 @@
     </div>
   </section>
   
-  <section  class="is-centered">
-    <div class="video-compare-container">
-      <img src="static/figures/attention/003320_attention_animation.gif" alt="">
-      <!-- <video poster="" id="">
-        <source src="static/figures/attention/003320_attention_animation.gif" type="video/gif">
-      </video> -->
-     <div class="video-clipper">
-        <!-- <video poster="" id="" >
-          <source src="static/figures/attention/003320_humanML3D_animation.gif" type="video/gif">
-        </video> -->
-        <img src="static/figures/attention/003320_humanML3D_animation.gif" alt="">
-      </div>
-    </div>
+
+  <section class="section hero teaser">
+    <ul class="carousel-container radio">
+      <li>
+        <input class="carousel-toggle" id="slide-1" type="radio" name="c-toggle" checked/> 
+        <label class="dot" for="slide-1"></label>
+        <ul class="carousel-content">
+          <li>
+            <div style="display:flex; flex-direction: row;">
+                <div class="video-compare-container">
+                  <img src="static/figures/attention/010481_attention_animation.gif" alt="">
+                  <div class="video-clipper">
+                    <img src="static/figures/attention/010481_humanML3D_animation.gif" alt="">
+                  </div>
+                </div>   
+                <div class="video-compare-container">
+                  <img src="static/figures/attention/003320_attention_animation.gif" alt="">
+                  <div class="video-clipper">
+                    <img src="static/figures/attention/003320_humanML3D_animation.gif" alt="">
+                  </div>
+                </div>            
+            </div>                 
+            <label class="arrow next slider-navigation-previous" for="slide-2"><svg  viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+            </svg></label>
+            <label class="arrow back slider-navigation-next" for="slide-2"><svg  viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375, 0.375 45.63,38.087 0.375, 75.8 "></polyline>
+            </svg></label>         
+          </li>
+        </ul>
+      </li>
+      <li>
+        <input class="carousel-toggle" id="slide-2" type="radio" name="c-toggle" />   
+        <label class="dot" for="slide-2"></label>
+        <ul class="carousel-content">
+          <li>
+            <div style="display:flex; flex-direction: row;">
+              <div class="video-compare-container">
+                <img src="static/figures/attention/000339_attention_animation.gif" alt="">
+                <div class="video-clipper">
+                  <img src="static/figures/attention/000339_humanML3D_animation.gif" alt="">
+                </div>
+              </div>  
+              <div class="video-compare-container">
+                <img src="static/figures/attention/009755_attention_animation.gif" alt="">
+                <div class="video-clipper">
+                  <img src="static/figures/attention/009755_humanML3D_animation.gif" alt="">
+                </div>
+              </div>            
+            </div> 
+            <label class="arrow next slider-navigation-previous" for="slide-1"><svg  viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+            </svg></div>
+            <div class="arrow back slider-navigation-next" for="slide-1"><svg  viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375, 0.375 45.63,38.087 0.375, 75.8 "></polyline>
+            </svg></label>   
+             
+          </li>  
+        </ul>    
+      </li>
+    </ul>
   </section>
-
-
-
+    
 
 
 
@@ -462,14 +508,14 @@
 </div>
 </section> -->
 
-  <section class="hero is-small">
+  <!-- <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
         <div class="column is-centered has-text-centered">
           <img src="static/figures/Framework.png" alt="framework"/>
         </div>  
     </div>
-  </section>
+  </section> -->
 
 
 
