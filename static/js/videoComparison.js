@@ -27,16 +27,27 @@ function init(){
 
             console.log(currentContainer);
             console.log(currentClipper);
+            
+            // var clippedVideo = currentClipper.children[0]; 
+            // var rect = currentContainer.getBoundingClientRect();
+            // var position = ((e.pageX - rect.left) / currentContainer.offsetWidth)*100;
+            // if (position <= 100) { 
+            //     currentClipper.style.width = position+"%";                  
+            //     clippedVideo.style.width = ((100/position)*100)+"%";
+            //     clippedVideo.style.zIndex = 3;
+            // }
 
+            var clippedVideo = currentClipper.children[0]; 
             var rect = currentContainer.getBoundingClientRect();
             var position = ((e.pageX - rect.left) / currentContainer.offsetWidth)*100;
             if (position <= 100) { 
-                currentClipper.style.width = position+"%";
-                var clippedVideo = currentClipper.children[0];   
+                currentClipper.style.width = position+"%";                  
                 clippedVideo.style.width = ((100/position)*100)+"%";
                 clippedVideo.style.zIndex = 3;
             }
         }
+        console.log(videoContainer.children[0]);
+        videoContainer.style.width = videoContainer.children[0].style.width;
         videoContainer.addEventListener("mousemove", trackLocation, false); 
         videoContainer.addEventListener("touchstart",trackLocation,false);
         videoContainer.addEventListener("touchmove",trackLocation,false);
