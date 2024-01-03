@@ -144,6 +144,7 @@
 
 
 
+
 .carousel-container {
   /* list-style-type: none;
   padding: 0;
@@ -227,9 +228,4 @@
       img { opacity: 1; }
     }
   }
-}
-
-.carousel-image-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
 }
