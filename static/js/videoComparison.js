@@ -1,6 +1,5 @@
 window.addEventListener("load",init,false);
 
-
 function init(){
 
     /* video comparison bar*/    
@@ -25,8 +24,8 @@ function init(){
                 currentClipper = e.target.parentNode;
             }
 
-            // console.log(currentContainer);
-            // console.log(currentClipper);
+            console.log(currentContainer);
+            console.log(currentClipper);
             
             var clippedVideo = currentClipper.children[0]; 
             var rect = currentContainer.getBoundingClientRect();
@@ -60,6 +59,7 @@ function init(){
 
         }, false);        
 
+
         image.addEventListener("mouseleave", (e)=>{
             var container = document.getElementById("enlarge-container")
             var label = container.getAttribute("label");
@@ -68,7 +68,5 @@ function init(){
 
         }, false);  
     });      
-
-    
 
 }
