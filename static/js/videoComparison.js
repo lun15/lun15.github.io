@@ -24,8 +24,8 @@ function init(){
                 currentClipper = e.target.parentNode;
             }
 
-            console.log(currentContainer);
-            console.log(currentClipper);
+            // console.log(currentContainer);
+            // console.log(currentClipper);
             
             var clippedVideo = currentClipper.children[0]; 
             var rect = currentContainer.getBoundingClientRect();
