@@ -586,7 +586,7 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column ">
           <h2 class="title2">Partition Strategy: Body part</h2>
           <div class="content has-text-justified">
             <div class="column is-centered has-text-centered">
@@ -607,10 +607,10 @@
                     <td>31.60%</td>
                     <td>53.69%</td>
                   </tr>
-                  <tr>
+                  <tr style="color:rgb(243, 67, 67); font-weight: 900; font-size: larger;">
                     <th>Body Part</th>
-                    <td style="font-weight: 900;">32.29%</td>
-                    <td style="font-weight: 900;">54.71%</td>
+                    <td >32.29%</td>
+                    <td >54.71%</td>
                   </tr>                  
                   
                 </tbody>
@@ -645,6 +645,50 @@
               <img src="static/figures/sta-gcn.png" alt="sta-gcn"/>
             </div>
             <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title2 is-3">T5 Evaluation</h2>
+          <div class="content has-text-justified">
+            <!-- <div class="column is-centered has-text-centered">
+              <img src="static/figures/evaluation.png" alt="evaluation"/>
+            </div> -->
+            <p>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Bleu_1</th>
+                    <th>Bleu_2</th>
+                    <th>Bleu_3</th>
+                    <th>Bleu_4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>T5</th>
+                    <td>0.427747</td>
+                    <td>0.335629</td>
+                    <td>0.282911</td>
+                    <td>0.250055</td>
+                  </tr>
+                  <tr style="color:rgb(243, 67, 67); font-weight: 900; font-size: larger;">
+                    <th>ST-GCN+Attention+T5</th>
+                    <td>0.487277</td>
+                    <td>0.348097</td>
+                    <td>0.215145</td>
+                    <td>0.138422</td>
+                  </tr>
+                </tbody>
+              </table>
+            </p>
           </div>
         </div>
       </div>
