@@ -119,6 +119,8 @@ function addContainerDrop(e){
   e.addEventListener('dragover',  event => event.preventDefault());
 }
 
+
+
 var listItens = document.querySelectorAll('ul');
 [].forEach.call(listItens, function(ul, index) {
   addContainerDrop(ul)  ;
