@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,800');
 
 body {
-  background-color: black;    
+  background-color: black;   
+  padding: 1%; 
 }
 
 h1{

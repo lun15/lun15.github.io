@@ -1,6 +1,20 @@
 var btns = document.getElementsByClassName('add');
 var remove = document.querySelector('.draggable');
 
+let schedule = [
+['TW1',	'TW1','TP1', 'TP1','TP1','TP1','TG1'],					
+['TW2','TW2','TW2','TP2','TP2','TP2','TP2','TG1']	,		
+['LW1','LW1','LW1','LW1',	'TP4','TP4','TP4','TP4','TG1'],
+['TW3',	'TP3','TP3','TP3','TP3','LG1','LG1','LG1'],				
+['LW2','LW2','LW2','LW2', 'LP2','LP2','LP2','LG2','LG2','LG2'],	
+['LW3','LW3','LP3','LP3','LP3','LP3','LP3','LP3',	'LG3','LG3','LG3'],	
+['','', 'TW1','TW1','TW1','', 'TP1','TP1','TP1','TP1','TG1'],	
+['','','', 'TW2','TW2','TW2','', 'TP2','TP2',	'TG1'],		
+['','TW3','TW3','TW3','',	'TP3','TP3','TP3','TP3','TP3','TP3','TG1'],
+]
+
+
+
 function dragStart(e) {
   this.style.opacity = '0.4';
   dragSrcEl = this;
@@ -38,8 +52,9 @@ function dragDrop(e) {
   //   console.log(dragSrcEl);
   //   // dragSrcEl.innerHTML = this.innerHTML;
   //   // this.innerHTML = e.dataTransfer.getData('text/html');
-    
+    console.log();
     this.parentNode.insertBefore(dragSrcEl, this.nextSibling);
+    // this.parentNode.inserAfter(dragSrcEl, this.nextSibling);/
   
   }
   
@@ -93,14 +108,43 @@ function addContainerDrop(e){
   e.addEventListener('drop', function(event){
     event.preventDefault();
     e.appendChild(dragSrcEl);
-  }); 
+  },false); 
   e.addEventListener('dragover',  event => event.preventDefault());
 }
 
 var listItens = document.querySelectorAll('ul');
-[].forEach.call(listItens, function(item) {
-  addContainerDrop(item)  
+[].forEach.call(listItens, function(ul, index) {
+  addContainerDrop(ul)  ;
+  [].forEach.call(schedule[index], function(job){  
+    // console.log(job);
+    console.log(schedule[index]);
+    var li = document.createElement('li');
+    var attr = document.createAttribute('draggable');    
+    li.className = 'draggable';
+    attr.value = 'true';
+    li.setAttributeNode(attr);
+    li.appendChild(document.createTextNode(job));
+    ul.appendChild(li);
+    addContainerDrop(ul)  
+    addEventsDragAndDrop(li);
+    checkColor(li, job)
+  });
 });
+
+function checkColor(li, newItem){
+  if (newItem != '') {
+    li.classList.add('full');
+    if(newItem.length >=2){
+      let ch = newItem[1].toLowerCase()
+      if( ch == 'p')li.classList.add('red')
+      else if(ch=='g')li.classList.add('green')
+      else li.classList.add('blue')
+    }
+  }else{
+    li.classList.add('blank');
+  }
+}
+
 
 function addNewItem(e) {
   var newItem = e.target.parentNode.children[0].value;
@@ -117,12 +161,8 @@ function addNewItem(e) {
   addContainerDrop(ul)  
   addEventsDragAndDrop(li);
 
-
-  if (newItem != '') {
-    li.classList.add('full');
-  }else{
-    li.classList.add('blank');
-  }
+  checkColor(li, newItem)
+  
 }
 
 for(let i=0; i<btns.length; i++){
