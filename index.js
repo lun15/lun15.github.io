@@ -100,7 +100,6 @@ function addEventsDragAndDrop(el) {
   el.addEventListener("touchend", dragEnd, false);
   el.addEventListener("touchcancel", dragDrop, false);
   el.addEventListener("touchleave", dragLeave, false);
-  el.addEventListener("touchmove", dragEnter, false);
 
   
 }
