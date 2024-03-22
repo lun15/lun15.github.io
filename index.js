@@ -96,10 +96,20 @@ function addEventsDragAndDrop(el) {
 
 
 
-  el.addEventListener("touchstart", dragStart, false);
+  el.addEventListener("touchmove", dragStart, false);
   el.addEventListener("touchend", dragEnd, false);
   el.addEventListener("touchcancel", dragDrop, false);
   el.addEventListener("touchleave", dragLeave, false);
+  el.addEventListener("touchmove", function(e){
+    var touchLocation = e.targetTouches[0];
+    el.stle.left = touchLocation.pageX + 'px';
+    el.style.top = touchLocation.pageY + 'px';
+  });
+  el.addEventListener("touchend", function(e){
+    var x =parseInt(el.style.left);
+    var y = parseInt(el.style.top);
+  });
+
 
   
 }
@@ -118,6 +128,8 @@ function addContainerDrop(e){
   },true); 
   e.addEventListener('dragover',  event => event.preventDefault());
 }
+
+
 
 var listItens = document.querySelectorAll('ul');
 [].forEach.call(listItens, function(ul, index) {
