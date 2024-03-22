@@ -12,6 +12,9 @@ https://lun15.github.io/
 1. type job name
 2. press `+`
 
+### Copy
+press `Ctrl` + `drag` or `click` the job
+
 ### Job color
 1. water: blue
 2. power: red
