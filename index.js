@@ -47,12 +47,11 @@ function dragOver(e) {
 
 function dragDrop(e) {
   e.preventDefault();
-  if (dragSrcEl != this) {
 
+  if (dragSrcEl != this) {
   //   console.log(dragSrcEl);
   //   // dragSrcEl.innerHTML = this.innerHTML;
   //   // this.innerHTML = e.dataTransfer.getData('text/html');
-    console.log();
     this.parentNode.insertBefore(dragSrcEl, this.nextSibling);
     // this.parentNode.inserAfter(dragSrcEl, this.nextSibling);/
   
@@ -107,8 +106,8 @@ function addContainerDrop(e){
   
   e.addEventListener('drop', function(event){
     event.preventDefault();
-    e.appendChild(dragSrcEl);
-  },false); 
+    if(this==e)e.appendChild(dragSrcEl);
+  },true); 
   e.addEventListener('dragover',  event => event.preventDefault());
 }
 
@@ -116,8 +115,6 @@ var listItens = document.querySelectorAll('ul');
 [].forEach.call(listItens, function(ul, index) {
   addContainerDrop(ul)  ;
   [].forEach.call(schedule[index], function(job){  
-    // console.log(job);
-    console.log(schedule[index]);
     var li = document.createElement('li');
     var attr = document.createAttribute('draggable');    
     li.className = 'draggable';

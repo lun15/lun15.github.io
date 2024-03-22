@@ -91,7 +91,7 @@ h1{
     position: relative;
     padding: 0%;
     height: 100em;
-    
+    z-index: 1;
     .draggable {
       text-align: center;
       will-change: transform;
@@ -101,7 +101,7 @@ h1{
       height: 30px;
       list-style-type: none;
       margin-top: 10px;
-      
+      z-index: 5;
       color: black;
       /* width: 250px; */
       /* width: 90%; */
