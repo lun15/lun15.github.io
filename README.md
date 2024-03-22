@@ -5,7 +5,7 @@ https://lun15.github.io/
 
 ### Clear element
 1. Press  `Clear`: clera all job
-2. double click on each job: remove the job clicked only
+2. `double click` on each job: remove the job clicked only
 
 
 ### Add job
