@@ -98,16 +98,16 @@ function addEventsDragAndDrop(el) {
 
   // el.addEventListener("touchmove", dragStart, false);
   // el.addEventListener("touchend", dragEnd, false);
-  el.addEventListener("touchcancel", dragDrop, false);
-  el.addEventListener("touchleave", dragLeave, false);
+  // el.addEventListener("touchcancel", dragDrop, false);
+  // el.addEventListener("touchleave", dragLeave, false);
   el.addEventListener("touchmove", function(e){
     var touchLocation = e.targetTouches[0];
     el.stle.left = touchLocation.pageX + 'px';
     el.style.top = touchLocation.pageY + 'px';
-    dragStart
+    // dragStart
   });
   el.addEventListener("touchend", function(e){
-    dragEnd
+    // dragEnd
     var x =parseInt(el.style.left);
     var y = parseInt(el.style.top);
   });
