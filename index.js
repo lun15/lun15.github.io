@@ -73,7 +73,7 @@ function handleMouseDown(e) {
   if (e.ctrlKey) {      
       var ul = e.target.parentNode;
       li = e.target.cloneNode(true);
-      ul.appendChild(li);
+      ul.insertBefore(li, e.target.nextSibling);
       addEventsDragAndDrop(li);
   }
 }
@@ -110,6 +110,7 @@ function addEventsDragAndDrop(el) {
     // dragEnd
     var x =parseInt(el.style.left);
     var y = parseInt(el.style.top);
+    console.log(x, y);
   });
 
 
