@@ -93,6 +93,15 @@ function addEventsDragAndDrop(el) {
     e.target.remove();
   });
   el.addEventListener('mousedown', handleMouseDown, false);
+
+
+
+  el.addEventListener("touchstart", dragStart, false);
+  el.addEventListener("touchend", dragEnd, false);
+  el.addEventListener("touchcancel", dragDrop, false);
+  el.addEventListener("touchleave", dragLeave, false);
+  el.addEventListener("touchmove", dragEnter, false);
+
   
 }
 
