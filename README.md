@@ -13,7 +13,7 @@ https://lun15.github.io/
 2. press `+`
 
 ### Copy
-press `Ctrl` + `drag` or `click` the job
+press `Ctrl` + `drag` or press `Ctrl` +`click` the job
 
 ### Job color
 1. water: blue
