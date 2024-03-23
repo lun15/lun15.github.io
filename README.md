@@ -1,13 +1,19 @@
 # Part A [排程分析]: Scheduling Tool
 
+## 網址
+https://lun15.github.io/
+
 ### Clear element
 1. Press  `Clear`: clera all job
-2. double click on each job: remove the job clicked only
+2. `double click` on each job: remove the job clicked only
 
 
 ### Add job
 1. type job name
 2. press `+`
+
+### Copy
+press `Ctrl` + `drag` or press `Ctrl` +`click` the job
 
 ### Job color
 1. water: blue
