@@ -4,13 +4,13 @@ var remove = document.querySelector('.draggable');
 let schedule = [
 ['TW1',	'TW1','TP1', 'TP1','TP1','TP1','TG1'],					
 ['TW2','TW2','TW2','TP2','TP2','TP2','TP2','TG1']	,		
-['LW1','LW1','LW1','LW1',	'TP4','TP4','TP4','TP4','TG1'],
-['TW3',	'TP3','TP3','TP3','TP3','LG1','LG1','LG1'],				
+['TW3', 'TW3', 'LP1','LP1', 'LP1', 'LP1', 'LP1', 'LP1','TG1']	,	
+['LW1','LW1','TP3','TP3','TP3','TP3','LG1','LG1','LG1'],		
 ['LW2','LW2','LW2','LW2', 'LP2','LP2','LP2','LG2','LG2','LG2'],	
 ['LW3','LW3','LP3','LP3','LP3','LP3','LP3','LP3',	'LG3','LG3','LG3'],	
 ['','', 'TW1','TW1','TW1','', 'TP1','TP1','TP1','TP1','TG1'],	
 ['','','', 'TW2','TW2','TW2','', 'TP2','TP2',	'TG1'],		
-['','TW3','TW3','TW3','',	'TP3','TP3','TP3','TP3','TP3','TP3','TG1'],
+['','','TW3','TW3','TW3','',	'TP3','TP3','TP3','TP3','TP3','TP3','TG1'],
 ]
 
 
